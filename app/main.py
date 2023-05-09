@@ -1,12 +1,12 @@
 # imports
-from secrets import mongo_user, mongo_pass
+from secrets import mongo_user, mongo_pass, mongo_addr
 from datetime import datetime
 import pyperclip as ppc
 import pymongo
 import time
 
 # mongo db inits
-uri = "mongodb+srv://" + mongo_user + ":" + mongo_pass + "@cluster0.mxftu2r.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://" + mongo_user + ":" + mongo_pass + "@" + mongo_addr
 client = pymongo.MongoClient(uri, server_api = pymongo.server_api.ServerApi('1'))
 mydb = client["Cluster0"]
 mycol = mydb["clips"]
