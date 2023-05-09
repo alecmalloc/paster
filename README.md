@@ -17,7 +17,7 @@ clipboards contain the same value.
 ## Running the script in the background
 
 To run the script in the background, follow the instructions provided in the guide below:
-* [Medium](https://github.com/mobxjs/mobx)
+* [Medium](https://medium.com/analytics-vidhya/easiest-way-to-run-a-python-script-in-the-background-4aada206cf29#:~:text=The%20easiest%20way%20of%20running,can%20use%20Windows%20Task%20Scheduler.&text=You%20can%20then%20give%20the,by%20giving%20the%20time%20particulars.)
 
 ## Resources and attributes
 
