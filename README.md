@@ -1,4 +1,4 @@
-# Paster <img src="app/clipboard.png" width="60">
+# Paster <img src="app/clipboard.png" width="30">
 
 Paster is a simple python lool that enables cross-platform clipboard sharing, similiar to that found in the
 Apple ecosystem. It checks the local clipboard against a shared clipboard in MongoDB and makes sure that all 
