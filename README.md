@@ -9,7 +9,7 @@ clipboards contain the same value.
 
 1. Clone the git repository install the project dependencies by running the following:
 ```
-pip install -r requirements.txt
+pip install -r requirements.txt 
 ```
 2. Create a database in MongoDB and paste the credentials into the app/secrets_template.py file
 3. Rename secrets_template.py to secrets.py
