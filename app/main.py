@@ -46,28 +46,31 @@ def isLocalSame():
 
 def isLocalinDatabase():
     try:
-        query = {"contents": ppc.paste()}
-        count = mycol.count_documents(query)
-        print(count)
-        if (count > 0):
+        x = mycol.find(sort=[("_id", pymongo.DESCENDING)])
+        second_to_last_doc = x[1]
+        database_contents = second_to_last_doc["contents"]
+        local_contents = ppc.paste()
+        if local_contents == database_contents:
             return True
         else:
             return False
     except Exception as e:
         print(e)
 
+
 def main():
-    print("initializing connection with DB")
+    print("initializing connection with database")
     while True:
         if isLocalSame() is False:
             if isLocalinDatabase() is True:
                 databaseCopy()
-                print("recieved database clipboard")
+                print("<----------- recieved database clipboard")
             else:
                 databasePaste()
-                print("sent local clipboard to database")
-        time.sleep(sleep)
-        print(f"slept {sleep}")
+                print("-----------> sent local clipboard to database")
+        else:
+            print(f"checked -- no diff -- sleeping {sleep}")
+            time.sleep(sleep)
 
 if __name__ == "__main__":
     main()
