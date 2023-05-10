@@ -54,6 +54,7 @@ def isLocalinDatabase():
         print(e)
 
 def main():
+    print("boot")
     while True:
         if isLocalSame() is False:
             if isLocalinDatabase() is True:
