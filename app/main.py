@@ -11,6 +11,9 @@ client = pymongo.MongoClient(uri, server_api = pymongo.server_api.ServerApi('1')
 mydb = client["Cluster0"]
 mycol = mydb["clips"]
 
+# global variables
+sleep = 3 # set this to any value you like. less time means faster sync but more resource use. just monitor usage data and see whats best for you
+
 # send contents of clipboard to database
 def databasePaste():
     try:
@@ -63,8 +66,8 @@ def main():
             else:
                 databasePaste()
                 print("sent local clipboard to database")
-        time.sleep(6)
-        print("slept 6")
+        time.sleep(sleep)
+        print(f"slept {sleep}")
 
 if __name__ == "__main__":
     main()
