@@ -1,12 +1,17 @@
 # imports
-from secrets import mongo_user, mongo_pass, mongo_addr
 from datetime import datetime
 import pyperclip as ppc
 import pymongo
 import time
+import os
+
+# rename secrets_template to secrets on first boot and import mongo uri
+if os.path.isfile("secrets_template.py"):
+    os.rename("secrets_template.py", "secrets.py")
+from secrets import mongo_uri
 
 # mongo db inits
-uri = "mongodb+srv://" + mongo_user + ":" + mongo_pass + "@" + mongo_addr
+uri = mongo_uri
 client = pymongo.MongoClient(uri, server_api = pymongo.server_api.ServerApi('1'))
 mydb = client["Cluster0"]
 mycol = mydb["clips"]
