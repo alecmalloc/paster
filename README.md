@@ -8,11 +8,9 @@ clipboards contain the same value.
 ## Installation and setup
 
 1. Clone the git repository install the project dependencies by running the following:
-
 ```pip install -r requirements.txt ```
 2. Create a database in MongoDB and paste the credentials into the app/secrets_template.py file (make sure to paste the password into the uri string as well)
 3. Cd into the app directory and run the app 
-
 ```cd app```
 ```python main.py```
 
