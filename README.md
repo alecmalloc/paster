@@ -13,8 +13,10 @@ pip install -r requirements.txt
 ```
 2. Create a database in MongoDB and paste the credentials into the app/secrets_template.py file (make sure to paste the password into the uri string as well)
 3. Cd into the app directory and run the app 
-```cd app```
-```python main.py```
+```bash 
+cd app
+python main.py
+```
 
 ## Running the script in the background
 
