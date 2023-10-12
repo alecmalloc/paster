@@ -4,6 +4,7 @@ Paster is a simple python lool that enables cross-platform clipboard sharing, si
 Apple ecosystem. It checks the local clipboard against a shared clipboard in MongoDB and makes sure that all 
 clipboards contain the same value.
 
+(Tested working on Linux and Windows)
 
 ## Installation and setup
 
